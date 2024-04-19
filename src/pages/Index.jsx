@@ -73,70 +73,7 @@ const Index = () => {
           </DrawerBody>
         </DrawerContent>
       </Drawer>
-      <VStack spacing={4} p={4} boxShadow="md" borderRadius="lg">
-        <Image src="https://images.unsplash.com/photo-1556740714-a8395b3bf30f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxwYXltZW50JTIwYXBwJTIwbG9nb3xlbnwwfHx8fDE3MTM1MDQ2OTN8MA&ixlib=rb-4.0.3&q=80&w=1080" borderRadius="full" boxSize="100px" alt="NexusPay Logo" />
-        <Heading as="h1" size="xl">
-          NexusPay
-        </Heading>
-        <Text>Welcome to NexusPay, your trusted payment aggregator.</Text>
-
-        <Flex w="full" justify="space-between">
-          <Button leftIcon={<FaUserPlus />} colorScheme="teal" variant="solid" onClick={() => alert("Register")}>
-            Register
-          </Button>
-          <Button leftIcon={<FaSignInAlt />} colorScheme="blue" variant="outline" onClick={handleLogin}>
-            Login
-          </Button>
-        </Flex>
-
-        <Flex direction="column" align="center" w="full">
-          <Link href="#" style={{ textDecoration: "none" }}>
-            <Button leftIcon={<FaUserCircle />} w="full" justifyContent="start" variant="ghost">
-              Manage Account
-            </Button>
-          </Link>
-          <Link href="#" style={{ textDecoration: "none" }}>
-            <Button leftIcon={<FaShoppingCart />} w="full" justifyContent="start" variant="ghost">
-              E-Commerce
-            </Button>
-          </Link>
-          <Link href="#" style={{ textDecoration: "none" }}>
-            <Button leftIcon={<FaCreditCard />} w="full" justifyContent="start" variant="ghost">
-              Load Cash Card
-            </Button>
-          </Link>
-          <Link href="#" style={{ textDecoration: "none" }}>
-            <Button leftIcon={<FaMobileAlt />} w="full" justifyContent="start" variant="ghost">
-              Load Airtime
-            </Button>
-          </Link>
-          <Link href="#" style={{ textDecoration: "none" }}>
-            <Button leftIcon={<FaRegMoneyBillAlt />} w="full" justifyContent="start" variant="ghost">
-              Pay Bills
-            </Button>
-          </Link>
-          <Link href="#" style={{ textDecoration: "none" }}>
-            <Button leftIcon={<FaChartBar />} w="full" justifyContent="start" variant="ghost">
-              Analytics Dashboard
-            </Button>
-          </Link>
-          <Link href="#" style={{ textDecoration: "none" }}>
-            <Button leftIcon={<FaCog />} w="full" justifyContent="start" variant="ghost">
-              Settings
-            </Button>
-          </Link>
-          <Link href="#" style={{ textDecoration: "none" }}>
-            <Button leftIcon={<FaTools />} w="full" justifyContent="start" variant="ghost">
-              System Administration
-            </Button>
-          </Link>
-          <Link href="#" style={{ textDecoration: "none" }}>
-            <Button leftIcon={<FaBell />} w="full" justifyContent="start" variant="ghost" color="white">
-              Notifications
-            </Button>
-          </Link>
-        </Flex>
-      </VStack>
+      <Image src="https://images.unsplash.com/photo-1607011389171-4ff58f3f68f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Payment Background" objectFit="cover" height="100vh" width="100vw" />
       <Flex bg="blue.800" w="full" p={4} position="fixed" bottom="0" left="0" justify="space-around">
         <Button leftIcon={<FaShoppingCart />} variant="ghost" color="white" onClick={() => alert("E-Commerce")} />
         <Button leftIcon={<FaCreditCard />} variant="ghost" color="white" onClick={() => alert("Load Cash Card")} />
