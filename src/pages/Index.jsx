@@ -77,6 +77,9 @@ const Index = () => {
                 <Button w="full" justifyContent="start" variant="ghost">
                   Notifications
                 </Button>
+                <Button w="full" variant="ghost" hidden></Button>
+                <Button w="full" variant="ghost" hidden></Button>
+                <Button w="full" variant="ghost" hidden></Button>
               </VStack>
               <Button
                 w="full"
