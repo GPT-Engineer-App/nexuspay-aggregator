@@ -1,5 +1,5 @@
 // NexusPay - Payment Aggregator Web App
-import React from 'react';
+import React from "react";
 import { Box, Button, Flex, Heading, Input, Text, VStack, Image, Link, useToast, Drawer, DrawerBody, DrawerHeader, DrawerOverlay, DrawerContent, DrawerCloseButton, useDisclosure } from "@chakra-ui/react";
 import { FaUserPlus, FaSignInAlt, FaUserCircle, FaShoppingCart, FaCreditCard, FaMobileAlt, FaRegMoneyBillAlt, FaChartBar, FaCog, FaTools, FaBell, FaBars } from "react-icons/fa";
 
@@ -18,6 +18,7 @@ const Index = () => {
 
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [currentPage, setCurrentPage] = React.useState("home");
+  const [isLoggedIn, setIsLoggedIn] = React.useState(false);
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
@@ -74,6 +75,17 @@ const Index = () => {
               </Button>
               <Button w="full" justifyContent="start" variant="ghost">
                 Notifications
+              </Button>
+              <Button
+                w="full"
+                justifyContent="start"
+                variant="ghost"
+                onClick={() => {
+                  handleLogin();
+                  setIsLoggedIn(!isLoggedIn);
+                }}
+              >
+                {isLoggedIn ? "Log Out" : "Log In"}
               </Button>
             </VStack>
           </DrawerBody>
