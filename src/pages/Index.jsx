@@ -20,10 +20,20 @@ const Index = () => {
   return (
     <Flex direction="column" align="center" justify="center" h="100vh">
       <Flex bg="blue.800" w="full" p={4} color="white" align="center" justify="space-between">
-        <Heading size="md">NexusPay</Heading>
         <Button onClick={onOpen} variant="ghost" color="white">
           <FaBars />
         </Button>
+        <Heading size="md" flex="1" textAlign="center">
+          NexusPay
+        </Heading>
+        <Flex>
+          <Button variant="ghost" color="white">
+            <FaBell />
+          </Button>
+          <Button variant="ghost" color="white">
+            <FaUserCircle />
+          </Button>
+        </Flex>
       </Flex>
       <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
         <DrawerOverlay />
