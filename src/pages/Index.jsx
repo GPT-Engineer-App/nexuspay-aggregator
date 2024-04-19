@@ -48,7 +48,7 @@ const Index = () => {
           <DrawerCloseButton />
           <DrawerHeader borderBottomWidth="1px">Menu</DrawerHeader>
           <DrawerBody>
-            <Flex direction="column" justify="space-between" h="100%">
+            <Flex direction="column" justify="space-between" h="100%" mb="20px">
               <VStack spacing={4}>
                 <Button w="full" justifyContent="start" variant="ghost" onClick={() => handlePageChange("manageAccount")}>
                   Manage Account
