@@ -1,6 +1,6 @@
 // NexusPay - Payment Aggregator Web App
-import { Box, Button, Flex, Heading, Input, Text, VStack, Image, Link, useToast } from "@chakra-ui/react";
-import { FaUserPlus, FaSignInAlt, FaUserCircle, FaShoppingCart, FaCreditCard, FaMobileAlt, FaRegMoneyBillAlt, FaChartBar, FaCog, FaTools, FaBell } from "react-icons/fa";
+import { Box, Button, Flex, Heading, Input, Text, VStack, Image, Link, useToast, Drawer, DrawerBody, DrawerHeader, DrawerOverlay, DrawerContent, DrawerCloseButton, useDisclosure } from "@chakra-ui/react";
+import { FaUserPlus, FaSignInAlt, FaUserCircle, FaShoppingCart, FaCreditCard, FaMobileAlt, FaRegMoneyBillAlt, FaChartBar, FaCog, FaTools, FaBell, FaBars } from "react-icons/fa";
 
 const Index = () => {
   const toast = useToast();
@@ -15,8 +15,54 @@ const Index = () => {
     });
   };
 
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   return (
     <Flex direction="column" align="center" justify="center" h="100vh">
+      <Flex bg="blue.800" w="full" p={4} color="white" align="center" justify="space-between">
+        <Heading size="md">NexusPay</Heading>
+        <Button onClick={onOpen} variant="ghost">
+          <FaBars />
+        </Button>
+      </Flex>
+      <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
+        <DrawerOverlay />
+        <DrawerContent>
+          <DrawerCloseButton />
+          <DrawerHeader borderBottomWidth="1px">Menu</DrawerHeader>
+          <DrawerBody>
+            <VStack spacing={4}>
+              <Button w="full" justifyContent="start" variant="ghost">
+                Manage Account
+              </Button>
+              <Button w="full" justifyContent="start" variant="ghost">
+                E-Commerce
+              </Button>
+              <Button w="full" justifyContent="start" variant="ghost">
+                Load Cash Card
+              </Button>
+              <Button w="full" justifyContent="start" variant="ghost">
+                Load Airtime
+              </Button>
+              <Button w="full" justifyContent="start" variant="ghost">
+                Pay Bills
+              </Button>
+              <Button w="full" justifyContent="start" variant="ghost">
+                Analytics Dashboard
+              </Button>
+              <Button w="full" justifyContent="start" variant="ghost">
+                Settings
+              </Button>
+              <Button w="full" justifyContent="start" variant="ghost">
+                System Administration
+              </Button>
+              <Button w="full" justifyContent="start" variant="ghost">
+                Notifications
+              </Button>
+            </VStack>
+          </DrawerBody>
+        </DrawerContent>
+      </Drawer>
       <VStack spacing={4} p={4} boxShadow="md" borderRadius="lg">
         <Image src="https://images.unsplash.com/photo-1556740714-a8395b3bf30f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxwYXltZW50JTIwYXBwJTIwbG9nb3xlbnwwfHx8fDE3MTM1MDQ2OTN8MA&ixlib=rb-4.0.3&q=80&w=1080" borderRadius="full" boxSize="100px" alt="NexusPay Logo" />
         <Heading as="h1" size="xl">
