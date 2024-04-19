@@ -21,7 +21,7 @@ const Index = () => {
     <Flex direction="column" align="center" justify="center" h="100vh">
       <Flex bg="blue.800" w="full" p={4} color="white" align="center" justify="space-between">
         <Heading size="md">NexusPay</Heading>
-        <Button onClick={onOpen} variant="ghost">
+        <Button onClick={onOpen} variant="ghost" color="white">
           <FaBars />
         </Button>
       </Flex>
@@ -121,7 +121,7 @@ const Index = () => {
             </Button>
           </Link>
           <Link href="#" style={{ textDecoration: "none" }}>
-            <Button leftIcon={<FaBell />} w="full" justifyContent="start" variant="ghost">
+            <Button leftIcon={<FaBell />} w="full" justifyContent="start" variant="ghost" color="white">
               Notifications
             </Button>
           </Link>
