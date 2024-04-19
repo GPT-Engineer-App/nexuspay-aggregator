@@ -127,19 +127,11 @@ const Index = () => {
           </Link>
         </Flex>
       </VStack>
-      <Flex bg="blue.500" w="full" p={4} position="fixed" bottom="0" left="0" justify="space-around">
-        <Button leftIcon={<FaShoppingCart />} variant="ghost" onClick={() => alert("E-Commerce")}>
-          E-Commerce
-        </Button>
-        <Button leftIcon={<FaCreditCard />} variant="ghost" onClick={() => alert("Load Cash Card")}>
-          Load Cash Card
-        </Button>
-        <Button leftIcon={<FaMobileAlt />} variant="ghost" onClick={() => alert("Load Airtime")}>
-          Load Airtime
-        </Button>
-        <Button leftIcon={<FaRegMoneyBillAlt />} variant="ghost" onClick={() => alert("Pay Bills")}>
-          Pay Bills
-        </Button>
+      <Flex bg="blue.800" w="full" p={4} position="fixed" bottom="0" left="0" justify="space-around">
+        <Button leftIcon={<FaShoppingCart />} variant="ghost" color="white" onClick={() => alert("E-Commerce")} />
+        <Button leftIcon={<FaCreditCard />} variant="ghost" color="white" onClick={() => alert("Load Cash Card")} />
+        <Button leftIcon={<FaMobileAlt />} variant="ghost" color="white" onClick={() => alert("Load Airtime")} />
+        <Button leftIcon={<FaRegMoneyBillAlt />} variant="ghost" color="white" onClick={() => alert("Pay Bills")} />
       </Flex>
     </Flex>
   );
