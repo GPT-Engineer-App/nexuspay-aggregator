@@ -48,34 +48,36 @@ const Index = () => {
           <DrawerCloseButton />
           <DrawerHeader borderBottomWidth="1px">Menu</DrawerHeader>
           <DrawerBody>
-            <VStack spacing={4}>
-              <Button w="full" justifyContent="start" variant="ghost" onClick={() => handlePageChange("manageAccount")}>
-                Manage Account
-              </Button>
-              <Button w="full" justifyContent="start" variant="ghost">
-                E-Commerce
-              </Button>
-              <Button w="full" justifyContent="start" variant="ghost">
-                Load Cash Card
-              </Button>
-              <Button w="full" justifyContent="start" variant="ghost">
-                Load Airtime
-              </Button>
-              <Button w="full" justifyContent="start" variant="ghost">
-                Pay Bills
-              </Button>
-              <Button w="full" justifyContent="start" variant="ghost">
-                Analytics Dashboard
-              </Button>
-              <Button w="full" justifyContent="start" variant="ghost">
-                Settings
-              </Button>
-              <Button w="full" justifyContent="start" variant="ghost">
-                System Administration
-              </Button>
-              <Button w="full" justifyContent="start" variant="ghost">
-                Notifications
-              </Button>
+            <Flex direction="column" justify="space-between" h="100%">
+              <VStack spacing={4}>
+                <Button w="full" justifyContent="start" variant="ghost" onClick={() => handlePageChange("manageAccount")}>
+                  Manage Account
+                </Button>
+                <Button w="full" justifyContent="start" variant="ghost">
+                  E-Commerce
+                </Button>
+                <Button w="full" justifyContent="start" variant="ghost">
+                  Load Cash Card
+                </Button>
+                <Button w="full" justifyContent="start" variant="ghost">
+                  Load Airtime
+                </Button>
+                <Button w="full" justifyContent="start" variant="ghost">
+                  Pay Bills
+                </Button>
+                <Button w="full" justifyContent="start" variant="ghost">
+                  Analytics Dashboard
+                </Button>
+                <Button w="full" justifyContent="start" variant="ghost">
+                  Settings
+                </Button>
+                <Button w="full" justifyContent="start" variant="ghost">
+                  System Administration
+                </Button>
+                <Button w="full" justifyContent="start" variant="ghost">
+                  Notifications
+                </Button>
+              </VStack>
               <Button
                 w="full"
                 justifyContent="start"
@@ -87,7 +89,7 @@ const Index = () => {
               >
                 {isLoggedIn ? "Log Out" : "Log In"}
               </Button>
-            </VStack>
+            </Flex>
           </DrawerBody>
         </DrawerContent>
       </Drawer>
